@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-COMPATIBLE" content="ie=edge">
+    <title>高考志愿匹配——管理员端</title>
+<link rel="Bookmark" href="favicon.ico">
+<link rel="Shortcut Icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/upload.js" charset="utf-8"></script>
+</head>
+<body>
+
+    <div class="backimg"></div>
+    <div class="overlay"></div>
+    <!-- 头部 -->
+    <div id="top">
+        <script>
+            $("#top").load("_header.html")
+        </script>
+    </div>
+    <!-- _menu -->
+    <div id="menu">
+        <script>
+            $("#menu").load("_menu.html")
+        </script>
+    </div>
+
+<div class="Hui-article-box">
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 分数管理 <span
+            class="c-gray en">&gt;</span> 上传分数线  <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px"
+            href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+
+            <form id="tf" class="form-inline" enctype="multipart/form-data">
+                <h3>上传分数线</h3>
+          
+            <div class="subject">
+                <select name="select" id="Province" class="btn btn-default">
+                    <option value="广东省">广东省</option>
+                    <option value="广西省">广西省</option>
+                    <option value="河南省">河南省</option>
+                    <option value="湖南省">湖南省</option>
+                </select>
+        
+                <label class="form-radio">
+                    <input type="radio" value="0" name="subject"  checked="checked"/>理科
+                </label>
+                <label class="form-radio">
+                    <input type="radio" value="1" name="subject" />文科
+                </label>
+        </div>
+        <label>
+            <input type="file" name="file" multiple="multiple" class="btn btn-primary"/>
+        </label>
+        <label>
+            <input  id="upload" name="btn" type="button" value="上传文件" class="btn btn-primary btn-lg"/>
+        </label>
+        <h6>注：请上传.xls或.xlsx文件，文件第一列为分数，第二列为该分数段人数，第三列为排位</h6>
+    </form>
+</div>
+</body>
+</html>
